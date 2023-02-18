@@ -1,0 +1,38 @@
+.register-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;   
+}
+
+.register-container.dark{
+    background-color: black;
+    color:white;
+}
+
+.form-container{
+    display:flex;
+    flex-direction: column;
+    gap:1rem; 
+}
+
+.form-container input{
+    height: 1.5rem;
+    border-radius: 0.2rem;
+}
+
+h2{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+h2.dark{
+    margin-top: 1rem;
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+
+
+

@@ -1,0 +1,18 @@
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    font-size: xx-large;
+}
+
+.header-container span{
+    cursor: pointer;
+}
+
+.icons-container{
+    display:flex;
+    justify-content: space-evenly;
+    font-size: xx-large;
+    margin-top: 2rem;
+}
+
+

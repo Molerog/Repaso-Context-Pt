@@ -1,0 +1,19 @@
+.profile-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: xx-large;
+    height: 50%;
+    justify-content: center;
+}
+
+.profile-container.dark{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: xx-large;
+    height: 50%;
+    justify-content: center;
+    background-color: black;
+    color:white;
+}
