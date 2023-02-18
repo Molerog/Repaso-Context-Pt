@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "../Header/Header.css";
+import "./Header.css";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Language } from "./Language/Language";
-import { GlobalContext } from "../../context/GlobalState";
 import { Theme } from "./Theme/Theme";
+import { GlobalContext } from "../../context/GlobalState";
 
 export const Header = () => {
   const { pathname } = useLocation();
