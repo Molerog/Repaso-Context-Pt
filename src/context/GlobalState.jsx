@@ -28,7 +28,7 @@ export const GlobalProdiver = ({ children }) => {
   function handleLanguage(string) {
     let language = string.target.innerText;
     const selection = languageSelection(language);
-    return dispatch({
+     dispatch({
       type: "GET_SELECTED_LANGUAGE",
       payload: selection,
     });
@@ -42,12 +42,12 @@ export const GlobalProdiver = ({ children }) => {
   function handleTheme(string) {
     let theme = string.target.innerText;
     const style = themeSelection(theme);
-    return dispatch({
+    dispatch({
       type: "GET_SELECTED_THEME",
       payload: style,
     });
   }
-
+  
   const selectedTranslation = () => {
     return translations[state.language];
   };

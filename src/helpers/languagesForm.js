@@ -1,4 +1,4 @@
-export const translations={
+export const translations= {
     ES:{
         formMessage:'Por favor rellena este maravilloso formulario',
         formularyName: 'Nombre',
@@ -11,7 +11,7 @@ export const translations={
         wishes:'Espero que disfrutes de esta grandiosa web tan bien estilizada' ,
         register:'Registro',
         profile:'Perfil',
-        home:'Principal',
+        home:'Principal'
     },
     EN:{
         formMessage: 'Please fill this wonderful formulary',
@@ -25,6 +25,6 @@ export const translations={
         wishes:'I hope you enjoy this beautiful and such stylish web site',
         register:'Register',
         profile:'Profile',
-        home:'Home',
+        home:'Home'
     }
 }
