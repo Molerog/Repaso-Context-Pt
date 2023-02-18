@@ -1,6 +1,7 @@
 import { createContext, useReducer } from "react";
 import { Appreducer } from "./Appreducer";
 import { translations } from "../helpers/languagesForm";
+
 const initialState = {
   user: {},
   language: "ES",
@@ -19,39 +20,32 @@ export const GlobalProdiver = ({ children }) => {
     });
   }
 
+  function languageSelection(language) {
+    if (language === "ES") return "EN";
+    if (language === "EN") return "ES";
+  }
+
   function handleLanguage(string) {
     let language = string.target.innerText;
-    if (language === "ES") {
-      language = "EN";
-      return dispatch({
-        type: "GET_SELECTED_LANGUAGE",
-        payload: language,
-      });
-    }
-    if (language === "EN") {
-      language = "ES";
-      return dispatch({
-        type: "GET_SELECTED_LANGUAGE",
-        payload: language,
-      });
-    }
+    const selection = languageSelection(language);
+    return dispatch({
+      type: "GET_SELECTED_LANGUAGE",
+      payload: selection,
+    });
   }
+
+  function themeSelection(theme) {
+    if (theme === "☀️") return "🌙";
+    if (theme === "🌙") return "☀️";
+  }
+
   function handleTheme(string) {
     let theme = string.target.innerText;
-    if (theme === "☀️") {
-      theme = "🌙";
-      return dispatch({
-        type: "GET_SELECTED_THEME",
-        payload: theme,
-      });
-    }
-    if (theme === "🌙") {
-      theme = "☀️";
-      return dispatch({
-        type: "GET_SELECTED_THEME",
-        payload: theme,
-      });
-    }
+    const style = themeSelection(theme);
+    return dispatch({
+      type: "GET_SELECTED_THEME",
+      payload: style,
+    });
   }
 
   const selectedTranslation = () => {
@@ -60,7 +54,6 @@ export const GlobalProdiver = ({ children }) => {
 
   const selectedTheme = () => {
     if (state.theme === "🌙") return "dark";
-
     if (state.theme === "☀️") return "light";
   };
 
@@ -74,7 +67,7 @@ export const GlobalProdiver = ({ children }) => {
         selectedTranslation,
         theme: state.theme,
         handleTheme,
-        selectedTheme
+        selectedTheme,
       }}
     >
       {children}
