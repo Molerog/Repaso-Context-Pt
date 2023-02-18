@@ -25,10 +25,10 @@ export const GlobalProdiver = ({ children }) => {
     if (language === "EN") return "ES";
   }
 
-  function handleLanguage(string) {
-    let language = string.target.innerText;
+  function handleLanguage(element) {
+    let language = element.target.innerText;
     const selection = languageSelection(language);
-     dispatch({
+    dispatch({
       type: "GET_SELECTED_LANGUAGE",
       payload: selection,
     });
@@ -39,15 +39,15 @@ export const GlobalProdiver = ({ children }) => {
     if (theme === "🌙") return "☀️";
   }
 
-  function handleTheme(string) {
-    let theme = string.target.innerText;
+  function handleTheme(element) {
+    let theme = element.target.innerText;
     const style = themeSelection(theme);
     dispatch({
       type: "GET_SELECTED_THEME",
       payload: style,
     });
   }
-  
+
   const selectedTranslation = () => {
     return translations[state.language];
   };

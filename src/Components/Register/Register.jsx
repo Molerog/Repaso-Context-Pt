@@ -3,13 +3,12 @@ import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 
-
 export const Register = () => {
-  const { userData, selectedTranslation, selectedTheme } =
-    useContext(GlobalContext);
+  const { userData, selectedTranslation, selectedTheme } = useContext(GlobalContext);
   const navigate = useNavigate();
   const translation = selectedTranslation();
   const theme = selectedTheme();
+  
   function dataHandler(e) {
     e.preventDefault();
     const object = new FormData(e.target);
